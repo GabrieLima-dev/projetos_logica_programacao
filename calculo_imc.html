@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<h1>Cálculo do IMC</h1>
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+}
+
+var nome= prompt("Qual o seu nome?")
+var peso= parseFloat(prompt("Qual o seu peso?\nObs: Use o ponto para as gramas. Ex.: 60.60"));
+var pesoDecimal= peso.toFixed(2)
+var altura= parseFloat(prompt("Qual a sua altura?\nObs: Use o ponto para os centímetros. Ex.: 1.60"));
+var alturaDecimal= altura.toFixed(2)
+var imc= pesoDecimal / (alturaDecimal * alturaDecimal);
+var imcNotação= imc.toFixed(2)
+
+
+mostra(nome)
+mostra("Peso= " + pesoDecimal + " Kg")
+mostra("Altura= " + alturaDecimal + " m")
+pulaLinha()
+mostra("O seu IMC é: " + imcNotação);
+pulaLinha()
+
+if (imcNotação <= 18.5) {
+    mostra("<b>Você está abaixo do peso.</b>");
+}
+if (imcNotação >= 18.6 && imcNotação <= 24.9){
+     
+        mostra("<b>Parabéns! Você está no peso ideal.</b>");
+}
+if (imcNotação >= 25 && imcNotação <= 29.9){
+     
+        mostra("<b>Você está levemente acima do peso.</b>");
+}
+if (imcNotação >= 30 && imcNotação <= 34.9){
+     
+        mostra("<b>Você está no nível de obesidade grau I</b>");
+}
+if (imcNotação >= 35 && imcNotação <= 39.9){
+     
+        mostra("<b>Você está no nível de obesidade grau II</b>");
+}
+if (imcNotação >= 40) { 
+        mostra("<b>Você está no nível de obesidade grau III</b>");
+}
+
+</script>
+<br> 
+<img src= "https://lh3.googleusercontent.com/proxy/fJBHsBLoMpJSE_H9b0Liw-LCY-VHFXc4V9uKzKXEtApX_MHb0JVbLbi5VPkxHc_tcbKIyWH1-4l-pYWPk44s-lzGx6KG1u1o8O8gHiMqNt627W1MCdS6_F4">
